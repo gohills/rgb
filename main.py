@@ -1,0 +1,10 @@
+def on_forever():
+    basic.show_icon(IconNames.YES)
+    maqueen.write_led(maqueen.LED.LED_LEFT, maqueen.LEDswitch.TURN_ON)
+    maqueen.write_led(maqueen.LED.LED_RIGHT, maqueen.LEDswitch.TURN_OFF)
+    basic.pause(500)
+    basic.clear_screen()
+    maqueen.write_led(maqueen.LED.LED_LEFT, maqueen.LEDswitch.TURN_OFF)
+    maqueen.write_led(maqueen.LED.LED_RIGHT, maqueen.LEDswitch.TURN_ON)
+    basic.pause(500)
+basic.forever(on_forever)
